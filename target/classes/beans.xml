@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="autoFactory" class="org.example.AutoFactory">
+        <constructor-arg index="0" value="4" />
+        <constructor-arg index="1" ref="black_production_line"/>
+    </bean>
+    <bean id="black_production_line" class="org.example.BlackProductionLine"></bean>
+    <bean id="white_production_line" class="org.example.WhiteProductionLine"></bean>
+</beans>
