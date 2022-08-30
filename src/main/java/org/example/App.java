@@ -16,7 +16,9 @@ public class App
         AutoFactory autoFactory = ctx.getBean("autoFactory", AutoFactory.class);
         autoFactory.Run();
         System.out.println( "Кол-во автомобилей " + autoFactory.CountCars() );
+        System.out.println( "Кол-во попыток " + autoFactory.getFactoryCount() );
         autoFactory.Run();
         System.out.println( "Кол-во автомобилей во втором запуске " + autoFactory.CountCars() );
+        System.out.println( "Кол-во попыток " + autoFactory.getFactoryCount() );
     }
 }
